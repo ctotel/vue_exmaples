@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+   <title>RAFT/AgileRx</title>    
+
+    <!-- Include the jQuery library -->
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+     <!--VUE  
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.min.js"></script>
+ -->
+
+  <!--VUE   -->
+    <script src="http://cdn.jsdelivr.net/vue/2.3.0/vue.js"></script>
+ 
+     <!-- handlebars -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+     <script type="text/javascript" src="main.js"></script>  
+     <script type="text/javascript" src="formTest.js"></script>  
+   </head>
+
+
+<body>
+    <div id="app">
+      
+       <post :title="title" :author="author" :content="content"></post>
+    </div>
+
+    <template id="post-template">
+       <h1>{{ title }}</h1>
+       <h4>{{ author }}</h4>
+       <p>{{ content }}</p>
+     </template>
+ 
+
+ 
+    <script>
+
+       Vue.component('post', {
+         template: '#post-template',
+         props: ["title","author","content"]
+       });    
+
+        // create a new Vue instance and mount it to our div element above with the id of app
+       var vm = new Vue({
+         el: '#app',
+        data: {
+           author: 'Johnnie Walker',
+           title: 'Aging Your Own Whisky',
+          content: 'A bunch of steps and a whole lot of content'
+        }
+       });
+
+
+    </script>
+</body>
+
+</html>

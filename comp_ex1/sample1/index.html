@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+   <title>RAFT/AgileRx</title>    
+
+    <!-- Include the jQuery library -->
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+     <!--VUE  -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.min.js"></script>
+
+     <!-- handlebars -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+     <script type="text/javascript" src="main.js"></script>  
+
+   </head>
+
+
+<body>
+    <div id="app">
+        <greeting></greeting>
+    </div>
+
+    <template id="greeting-template">
+        <h1>Welcome to coligo!</h1>
+        <button>login</button>
+        <button>signup</button>
+        <a href="http://coligo.io">Check out the other tutorials!</a>
+    </template>
+
+
+    <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
+    <script>
+        Vue.component('greeting', {
+            template: '#greeting-template'
+        });
+
+        // create a new Vue instance and mount it to our div element above with the id of app
+        var vm = new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+
+</html>

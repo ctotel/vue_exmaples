@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+   <title>RAFT/AgileRx</title>    
+
+    <!-- Include the jQuery library -->
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+     <!--VUE   -->
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.min.js"></script>
+ 
+  <!--VUE   
+    <script src="http://cdn.jsdelivr.net/vue/2.3.0/vue.js"></script>
+ -->
+     <script type="text/javascript" src="main.js"></script>  
+
+   </head>
+
+  <body>
+
+
+  <div id="vue-instance">
+     <!-- this will be the DOM element we will mount our VueJs instance to -->
+     Enter a greeting: <input type="text" v-model="prompt">
+          <pre>{{ $data | json }}</pre>  
+  </div>
+
+  <ul id="example-1">
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
+  </ul>
+
+
+   <div id="vue-exp1"> 
+          <pre>{{ $data.users | json }}</pre>  
+  </div>
+
+    <button onClick="buttonHandler(event)">Send</button>
+  <script>
+
+  </script>
+
+  </body>
+</html>
