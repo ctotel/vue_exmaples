@@ -32,6 +32,23 @@ function UserType(id, first, last) {
 
 
 
+// Sort Array 
+function sortUser() {
+
+   // First to last 
+   userData.sort(function (a,b){
+     return (a.first > b.first); 
+   });
+
+
+/*  // Last to first 
+   userData.sort(function (a,b){
+     return (a.first < b.first); 
+   });
+*/ 
+
+}
+
 
 // there is an alias to jQuery -> $
 $(document).ready(function() {
@@ -44,6 +61,7 @@ $(document).ready(function() {
   userData.push( new UserType(2, "Tom", "Jones"));
   userData.push( new UserType(3, "Dave3", "Cripe"));
   userData.push( new UserType(4, "Aaron", "Ashe")); 
+  sortUser();
 
   actVM.projectId=10;
   actVM.actId  = 10
@@ -79,6 +97,7 @@ $(document).ready(function() {
 
 
 function buttonHandler (event) {
+
   console.log("Button Handler")
 
 }

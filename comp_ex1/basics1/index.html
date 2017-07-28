@@ -34,9 +34,19 @@
   </ul>
 
 
+  <ul id="vue-exp1">
+    <li v-for="user in userData">
+      {{ user.first }}
+    </li>
+  </ul>
+
+ <!-- this
+
    <div id="vue-exp1"> 
           <pre>{{ $data.users | json }}</pre>  
   </div>
+ -->
+
 
     <button onClick="buttonHandler(event)">Send</button>
   <script>
